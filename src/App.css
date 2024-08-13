@@ -7,7 +7,7 @@
 .cont-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 3cqh;
+  margin-top: 50px;
 }
 
 .rps-box {
@@ -27,6 +27,15 @@
   width: 250px;
   height: 250px;
 }
+
+.item-img-wrap p {
+  font-size: 30px;
+  display: inline-block;
+  font-weight: bold;
+  color: aquamarine;
+  margin-top: 100px;
+}
+
 .item-img {
   width: inherit;
 }

@@ -5,7 +5,11 @@ const RpsBox = (props) => {
     <div className="rps-box">
       <h1>{props.title}</h1>
       <div className="item-img-wrap">
-        <img className="item-img" src={props.item && props.item.img} alt="" />
+        {props.item && props.item.img ? (
+          <img className="item-img" src={props.item.img} alt={props.item.name} />
+        ) : (
+          <p>Click button!</p>
+        )}
       </div>
       <h2>win</h2>
     </div>
