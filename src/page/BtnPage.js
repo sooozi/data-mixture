@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import './App.css';
+import React, { useState } from 'react';
 
-function App() {
+const BtnPage = () => {
   const [counter, setCounter] = useState(0);
   const increase = () => {
     setCounter(counter + 1);
@@ -14,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default BtnPage

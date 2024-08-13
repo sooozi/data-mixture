@@ -1,7 +1,7 @@
 import './App.css';
 import Box from "./component/Box";
 
-function App() {
+function BoxPage() {
   return (
     <div className="App">
       <Box name="보라돌이" num="1"/>
@@ -12,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default BoxPage;
