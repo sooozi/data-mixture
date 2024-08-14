@@ -21,14 +21,14 @@ function App() {
   const [randomSelect, setRandomSelect] = useState(null);
   const play = (userChoice) => {
     setUserSelect(choice[userChoice])
-    showRandom();
+    let computerChoice = showRandom();
+    setRandomSelect(computerChoice); //랜덤셀렉터로 초기화
   }
 
-  function showRandom() {
-    const choiceKey = Object.keys(choice);
-    const randomImg = choiceKey[Math.floor(Math.random() * choiceKey.length)];
-    setRandomSelect(choice[randomImg]);
-    console.log(randomImg)
+  const showRandom = () => {
+    const choiceKey = Object.keys(choice); //객체에 키값만 뽑아서 배열로 만들어주는 함수!
+    const randomImg = choiceKey[Math.floor(Math.random() * choiceKey.length)]; //choiceKey[인덱스번호]
+    return choice[randomImg]; //객체에서 랜덤한 아이템에 해당하는 내용들을 가져옴!
   }
 
   return (
