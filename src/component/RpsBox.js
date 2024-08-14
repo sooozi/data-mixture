@@ -1,8 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 const RpsBox = (props) => {
+  let result;
+  if(
+    props.title === "👩‍💻 COMPUTER" &&
+    props.result !== "tie" &&
+    props.result !== ""
+  ) { 
+    result = props.result === "win" ? "lose" : "win";
+  } else {
+    result = props.result;
+  }
+
   return (
-    <div className="rps-box">
+    <div className={`rps-box ${result}`}>
       <h1>{props.title}</h1>
       <div className="item-img-wrap">
         {props.item && props.item.img ? (
@@ -11,7 +22,7 @@ const RpsBox = (props) => {
           <p>Click button!</p>
         )}
       </div>
-      <h2>win</h2>
+      <h2>{result}</h2>
     </div>
   )
 }

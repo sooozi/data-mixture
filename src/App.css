@@ -12,9 +12,17 @@
 
 .rps-box {
   border: 10px solid black;
-  width: 500px;
+  width: 400px;
   aspect-ratio: 1/1;
   text-align: center ;
+}
+
+.win {
+  border: 10px solid deeppink
+}
+
+.lose {
+  border: 10px solid rgb(100, 164, 237);
 }
 
 .rps-box:first-child {
@@ -23,9 +31,9 @@
 
 .item-img-wrap {
   display: inline-block;
-  margin: 50px 0;
-  width: 250px;
-  height: 250px;
+  margin: 10px 0;
+  width: 200px;
+  height: 200px;
 }
 
 .item-img-wrap p {
@@ -38,4 +46,12 @@
 
 .item-img {
   width: inherit;
+}
+
+.count-wrap {
+  border: 5px solid slategray;
+  width: 500px;
+  margin: 50px auto;
+  padding: 10px;
+  gap: 20px;
 }
