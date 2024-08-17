@@ -1,27 +1,35 @@
 /* 날씨앱 */
 body {
-  background: url(https://i.pinimg.com/564x/12/8c/49/128c4949cc9461e1a3a921d08d976a10.jpg);
-  background-size: cover;
+	height: 100vh;
+  /* background: url('https://img.freepik.com/free-vector/winter-light-blue-gradient-vector-background_53876-128352.jpg?t=st=1723894702~exp=1723898302~hmac=e0faca1b95d29ffbe2232747fce331c9f49ed2231b80fd1c1e0d4cb0eb677f5b&w=1380') no-repeat center center/ cover; */
+  background: url('https://i.pinimg.com/564x/a1/5f/d2/a15fd2baa7bd1de7ca3d683c3dcdd910.jpg') no-repeat 50% 80% / cover;
 }
 
 .container {
+  max-width: 600px;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 0 30px;
 }
 
 .weather-box-wrap{
-  border: 1px solid #000000;
-  border-radius: 30px;
   padding: 30px;
-  background-color: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
   margin-bottom: 50px;
 }
 
-.weather-btn-wrap button:not(:last-child){
-  margin-right: 10px;
+.weather-btn-wrap{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* 가위바위보 */

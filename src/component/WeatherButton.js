@@ -4,7 +4,7 @@ import { Button } from 'react-bootstrap';
 const WeatherButton = ({cities}) => {
   return (
     <div className='weather-btn-wrap'>
-      <Button variant="secondary">Secondary</Button>
+      <Button variant="secondary">Here!</Button>
       {cities.map((item) => (
         <Button variant="secondary">{item}</Button>
       ))}
