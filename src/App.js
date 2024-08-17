@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useEffect } from 'react';
 import './App.css';
 
@@ -9,20 +8,28 @@ function App() {
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
-      getWeather(lat, lon);
+      getWeatherByCurrentLocation(lat, lon);
     });
   }
-  const getWeather = async(lat, lon) => {
-    try {
-      const link = await axios.get(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
-      
-      )
-      console.log(link)
-    } catch(err) {
-      console.error(err)
-    }
+
+  const getWeatherByCurrentLocation = async(lat, lon)  => {
+    let url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log(API_KEY);
   }
+  //내가 불러온 api
+  // const getWeather = async(lat, lon) => {
+  //   try {
+  //     const link = await axios.get(
+  //       `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`
+      
+  //     )
+  //     console.log(link)
+  //   } catch(err) {
+  //     console.error(err)
+  //   }
+  // }
 
   useEffect(() => {
     getCurrentLocation();
