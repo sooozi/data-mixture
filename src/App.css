@@ -46,7 +46,7 @@ body {
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 
