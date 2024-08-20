@@ -1,11 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
-import './App.css';
-import WeatherBox from './component/WeatherBox';
-import WeatherButton from './component/WeatherButton';
+import WeatherBox from '../component/WeatherBox';
+import WeatherButton from '../component/WeatherButton';
 
-function App() {
+function WeatherAppPage() {
   const API_KEY = process.env.REACT_APP_WEATHER_KEY;
   const [weather, setWeather] = useState(null);
   const cities = ["Australia", "Germany", "Bangkok", "Prague"];
@@ -64,7 +64,8 @@ function App() {
   }, [city]);
 
   return (
-    <div className="App">
+    <div className="WeatherAppPage">
+      <Link to="/RpsPage">RpsPage</Link>
       <div className="container">
         {loading ? (<ClipLoader size={100} loading={loading}/>) : !apiError ? (
           <div>
@@ -80,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default WeatherAppPage;

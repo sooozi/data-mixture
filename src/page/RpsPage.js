@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './App.css';
-import RpsBox from './component/RpsBox';
+import RpsBox from '../component/RpsBox';
+import { useNavigate } from 'react-router-dom';
 
 const choice = {
   rock : {
@@ -16,13 +16,14 @@ const choice = {
     img:"https://cdn-icons-png.flaticon.com/512/16356/16356325.png"
   }
 }
-function RpsPage() {
+const RpsPage = () => {
   const [count, setCount] = useState(0);
   const [userCount, setUserCount] = useState(0);
   const [computerCount, setComputerCount] = useState(0);
   const [userSelect, setUserSelect] = useState(null);
   const [randomSelect, setRandomSelect] = useState(null);
   const [result, setResult] = useState("");
+  const navigate = useNavigate();
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]); //유저에 선택값
@@ -56,8 +57,13 @@ function RpsPage() {
     return choice[randomImg]; //객체에서 랜덤한 아이템에 해당하는 내용들을 가져옴!
   }
 
+  const goToWeatherAppPage = () => {
+    navigate("/");
+  }
+
   return (
     <div className="App">
+      <button onClick={goToWeatherAppPage}>goToWeatherAppPage</button>
       <div className="cont-wrap count-wrap">
         <span className="num-count">게임 횟수 : {count}</span>
         <span className="num-count">🙋‍♀️ : {userCount}</span>
