@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ClipLoader } from 'react-spinners';
 import WeatherBox from '../component/WeatherBox';
 import WeatherButton from '../component/WeatherButton';
@@ -12,6 +12,7 @@ function WeatherAppPage() {
   const [city, setCity] = useState(' ');
   const [loading, setLoading] = useState(false);
   const [apiError, setAPIError] = useState("");
+  const navigate = useNavigate();
 
   const getCurrentLocation = () => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -63,9 +64,15 @@ function WeatherAppPage() {
     }
   }, [city]);
 
+  const goToProductDetailPage = () => {
+    navigate('/productDetailPage?q=pants')
+  }
+
   return (
     <div className="WeatherAppPage">
       <Link to="/RpsPage">RpsPage</Link>
+      <button onClick={goToProductDetailPage}>productDetailPage</button>
+
       <div className="container">
         {loading ? (<ClipLoader size={100} loading={loading}/>) : !apiError ? (
           <div>

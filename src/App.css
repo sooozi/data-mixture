@@ -1,11 +1,11 @@
 /* 날씨앱 */
-body {
+.WeatherAppPage {
 	height: 100vh;
   /* background: url('https://img.freepik.com/free-vector/winter-light-blue-gradient-vector-background_53876-128352.jpg?t=st=1723894702~exp=1723898302~hmac=e0faca1b95d29ffbe2232747fce331c9f49ed2231b80fd1c1e0d4cb0eb677f5b&w=1380') no-repeat center center/ cover; */
   background: url('https://i.pinimg.com/564x/a1/5f/d2/a15fd2baa7bd1de7ca3d683c3dcdd910.jpg') no-repeat 50% 80% / cover;
 }
 
-.container {
+.WeatherAppPage .container {
   max-width: 600px;
   height: 100vh;
   display: flex;
@@ -110,4 +110,20 @@ body {
   width: 100px;
   height: 100px;
   border: 1px solid red;
+}
+
+/* 홈페이지 */
+.App, .HomePage {
+  height: 100vh;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.HomePage .cont-wrap {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
