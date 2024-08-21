@@ -11,6 +11,7 @@ const HomePage = () => {
             <Nav.Link href="/BoxPage">BoxPage</Nav.Link>
             <Nav.Link href="/RpsPage">RpsPage</Nav.Link>
             <Nav.Link href="/WeatherAppPage">WeatherAppPage</Nav.Link>
+            <Nav.Link href="/shop">Shop</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
