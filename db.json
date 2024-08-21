@@ -2,10 +2,12 @@
     "products":[
         {
             "id":0,
-            "img":"https://noona-hnm.netlify.app/pattern-jacket.jpeg",
-            "title":"벨티드 트윌 코트",
+            "img":"https://cdn.imweb.me/thumbnail/20240102/137384b2a0720.jpg",
+            "hover":"https://cdn.imweb.me/thumbnail/20240102/c6ae9a1b42cc5.jpg",
+            "title":"Petite Cherry Objet : 쁘띠 체리 오브제",
             "price":99900,
             "choice":true,
+            "hot":false,
             "new":true,
             "size":["S","M","L"]
 
@@ -16,6 +18,7 @@
             "title":"슬림핏 맘 하이웨이스트 앵클 진",
             "price":29900,
             "choice":true,
+            "hot":true,
             "new":true,
             "size":["S","M","L"]
 
@@ -26,6 +29,7 @@
             "title":"와이드 하이웨이스트 진",
             "price":39900,
             "choice":false,
+            "hot":true,
             "new":true,
             "size":["S","M","L"]
 
@@ -36,6 +40,7 @@
             "title":"퍼프 슬리브 드레스",
             "price":39900,
             "choice":false,
+            "hot":true,
             "new":true,
             "size":["S","M","L"]
 
@@ -46,6 +51,7 @@
             "title":"프릴 디테일 드레스",
             "price":29900,
             "choice":true,
+            "hot":false,
             "new":false,
             "size":["S","M","L"]
 
@@ -56,6 +62,7 @@
             "title":"시퀸 플레어 드레스",
             "price":39900,
             "choice":false,
+            "hot":true,
             "new":false,
             "size":["S","M","L"]
 
@@ -66,6 +73,7 @@
             "title":"더블 브레스티드 재킷",
             "price":39900,
             "choice":true,
+            "hot":true,
             "new":false,
             "size":["S","M","L"]
 
@@ -76,6 +84,7 @@
             "title":"오버사이즈 집업 후디",
             "price":99900,
             "choice":false,
+            "hot":true,
             "new":true,
             "size":["S","M","L"]
 
@@ -86,6 +95,7 @@
             "title":"아플리케 트랙 재킷",
             "price":14900,
             "choice":true,
+            "hot":false,
             "new":true,
             "size":["S","M","L"]
 
@@ -96,6 +106,7 @@
             "title":"프린트 후디",
             "price":19900,
             "choice":false,
+            "hot":true,
             "new":true,
             "size":["S","M","L"]
 
@@ -106,6 +117,7 @@
             "title":"와이드 트윌 팬츠",
             "price":19900,
             "choice":true,
+            "hot":true,
             "new":false,
             "size":["S","M","L"]
 
@@ -116,6 +128,7 @@
             "title":"플레어 로라이즈 진",
             "price":29900,
             "choice":true,
+            "hot":false,
             "new":true,
             "size":["S","M","L"]
 
@@ -126,6 +139,7 @@
             "title":"셔링 메쉬 드레스",
             "price":14900,
             "choice":true,
+            "hot":false,
             "new":true,
             "size":["S","M","L"]
 
@@ -136,6 +150,7 @@
             "title":"스웨트셔츠",
             "price":29900,
             "choice":false,
+            "hot":true,
             "new":false,
             "size":["S","M","L"]
 
