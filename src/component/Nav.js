@@ -15,7 +15,7 @@ const Nav = () => {
         </div>
         <div className='cont-wrap logo-box'>
           <img
-            width={112}
+            width={130}
             src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/b573f536e38c6.png"
             alt="logo image" />
         </div>

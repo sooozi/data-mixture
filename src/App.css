@@ -3,6 +3,9 @@
 .nav-wrap {
   margin-bottom: 10px;
 }
+.nav-wrap * {
+  font-size: 13px;
+}
 .nav-wrap .cont-wrap {
   margin-top: 0;
   padding: 10px 50px;
@@ -30,6 +33,9 @@
 }
 .menu-box li {
   display: inline-block;
+}
+.menu-box li:hover {
+  color: #ff7430;
 }
 .search-box {
   position: relative;
@@ -70,8 +76,14 @@ input:focus {
 }
 .item-price{
   font-size: 13px;
+  margin: 5px 0;
 }
-
+.icon-wrap {
+  margin: 6px 0;
+}
+.icon-wrap img:not(:last-child){
+  margin-right: 5px;
+}
 
 
 
