@@ -1,4 +1,29 @@
 /* [쇼핑몰] */
+/* [쇼핑몰] - ProductDetail */
+.page-productDetail {
+  padding: 50px 0 100px;
+}
+.page-productDetail .img-wrap,
+.page-productDetail .img-wrap img {
+  width: 100%;
+}
+.tit-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tit-icon-wrap .icon-wrap {
+  gap: 3px;
+}
+.page-productDetail .item-price {
+  display: block;
+  font-size: 13px;
+  color: #ff7430;
+  margin: 0 0 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.1);
+}
+
 /* [쇼핑몰] - Login */
 .page-login {
   padding: 10vh 0;
@@ -41,7 +66,7 @@
   border: 1px solid #ff7430;
   box-shadow: none;
 }
-.btn-login {
+.btn-login, .btn-add {
   margin-top: 20px;
   display: block;
   width: 100%;
