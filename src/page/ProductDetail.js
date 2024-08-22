@@ -1,9 +1,12 @@
 import React from 'react'
 
-const ProductDetail = () => {
+const ProductDetail = ({item}) => {
   return (
-    <div>
-        <h1>상품 상세 페이지</h1>
+    <div className="page-productDetail">
+      <div className="img-wrap">
+        <img src="https://cdn.imweb.me/thumbnail/20230513/d96e82422dd79.png" alt="product image" />
+      </div>
+        <h1>{item?.title}</h1>
     </div>
   )
 }

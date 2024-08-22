@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = ({authenticate}) => {
   const menuList = ['NEW IN','PAPERWEIGHT','OBJECT','FRUITS','STATIONERY','CLASS KIT',]
   return (
     <div className='nav-wrap'>
         <div className='cont-wrap login-wrap'>
             <Link to="/login" className='login-box'>
               <FontAwesomeIcon icon={faUser} />
-              <span>로그인</span>
+              <span>{authenticate ? '로그아웃' : '로그인'}</span>
             </Link>
         </div>
         <div className='cont-wrap logo-box'>

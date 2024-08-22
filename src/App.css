@@ -17,12 +17,29 @@
   border: 1px solid #e0e0e0;
   border-radius: 3px;
   font-size: 13px;
+  color: #ff7430;
+}
+.page-login input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin-right: 10px;
+}
+.page-login input[type="checkbox"]:checked {
+  background-color: #ff7430;
+  border: 1px solid #ff7430;
+}
+.form-check {
+  display: flex;
+  align-items: center;
 }
 .page-login input:not(:last-child) {
   margin-bottom: 5px;
 }
 .page-login input:focus {
+  color: #ff7430;
   border: 1px solid #ff7430;
+  box-shadow: none;
 }
 .btn-login {
   margin-top: 20px;
@@ -106,7 +123,7 @@ input:focus {
   border: 0;
   border-radius: 20px;
   padding: 5px 10px 5px 35px;
-  background-color: #ff753020;;
+  background-color: #ffb69120;
 }
 .input-search:focus {
   border: 0;

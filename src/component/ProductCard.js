@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router';
 
 const ProductCard = ({item}) => {
+  const navigate = useNavigate();
+  const showDetail = () => {
+    navigate(`/product/${item.id}`)
+  }
   return (
-    <div className='item-wrap'>
+    <div className='item-wrap' onClick={showDetail}>
       <img className='item-img' src={item?.img} alt="item image" />
       <img className='item-hover' src={item?.hover} alt="item hover image" />
       <div className='item-detail'>
