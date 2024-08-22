@@ -2,20 +2,21 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const menuList = ['NEW IN','PAPERWEIGHT','OBJECT','FRUITS','STATIONERY','CLASS KIT',]
   return (
     <div className='nav-wrap'>
         <div className='cont-wrap login-wrap'>
-          <div className='login-box'>
-            <FontAwesomeIcon icon={faUser} />
-            <span>로그인</span>
-          </div>
+            <Link to="/login" className='login-box'>
+              <FontAwesomeIcon icon={faUser} />
+              <span>로그인</span>
+            </Link>
         </div>
         <div className='cont-wrap logo-box'>
           <img
-            width={130}
+            width={150}
             src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/b573f536e38c6.png"
             alt="logo image" />
         </div>
