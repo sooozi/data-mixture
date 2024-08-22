@@ -18,7 +18,7 @@ function App() {
   const showNav = ["/login", "/shop", "/product"].some(path => location.pathname.startsWith(path));
 
   //로그인 상태
-  const [authenticate, setAuthenticate]=useState(true);
+  const [authenticate, setAuthenticate]=useState(false);
 
   useEffect(() => {
     console.log(authenticate);
