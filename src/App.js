@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-      {showNav && <NAV authenticate={authenticate}/>}
+      {showNav && <NAV authenticate={authenticate} setAuthenticate={setAuthenticate}/>}
       <Routes>
         <Route path="/" element={<HomePage/>}></Route>
         <Route path="/BoxPage" element={<BoxPage/>}></Route>

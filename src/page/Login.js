@@ -8,7 +8,6 @@ const Login = ({setAuthenticate}) => {
     event.preventDefault();
     setAuthenticate(true);
     navigate('/shop');
-    
   };
 
   return (
