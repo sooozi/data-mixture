@@ -285,7 +285,7 @@ input:focus {
   }
   .search-box {
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     left: 2rem;
   }
 }
