@@ -69,7 +69,7 @@ const Nav = ({authenticate}) => {
             <img
               width={150}
               src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/b573f536e38c6.png"
-              alt="logo image" />
+              alt="logo" />
           </Link>
         </div>
         <div className={`cont-wrap utility-box ${isActive ? 'active' : ''}`}>

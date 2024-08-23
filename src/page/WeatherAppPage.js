@@ -52,10 +52,10 @@ function WeatherAppPage() {
   }
 
   useEffect(() => {
-    if(city == ' ') {
+    if(city === ' ') {
       setLoading(true);
       getCurrentLocation();
-    } else if(city == 'Here'){
+    } else if(city === 'Here'){
       setLoading(true);
       getCurrentLocation();
     } else {

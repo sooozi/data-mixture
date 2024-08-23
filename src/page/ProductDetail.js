@@ -23,7 +23,7 @@ const ProductDetail = () => {
       <Row className="page-productDetail">
         <Col lg={6}>
           <div className="img-wrap">
-            <img src={product?.img} alt="product image" />
+            <img src={product?.img} alt="product" />
           </div>
         </Col>
 
@@ -33,9 +33,9 @@ const ProductDetail = () => {
             <div className="tit-icon-wrap">
               <h4>{product?.title}</h4>
               <div className='icon-wrap'>
-                <div className='icon-new'>{product?.new == true? <img width={48} src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/75e1a0648703f.png" alt="new icon" /> : ""}</div>
-                <div className='icon-hot'>{product?.hot == true? <img width={48} src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/1325bfe4d77a6.png" alt="hot icon" /> : ""}</div>
-                <div className='icon-choice'>{product?.choice == true? <img width={48} src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/acedcf9400bb7.png" alt="choice icon" /> : ""}</div>
+                <div className='icon-new'>{product?.new === true? <img width={48} src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/75e1a0648703f.png" alt="new icon" /> : ""}</div>
+                <div className='icon-hot'>{product?.hot === true? <img width={48} src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/1325bfe4d77a6.png" alt="hot icon" /> : ""}</div>
+                <div className='icon-choice'>{product?.choice === true? <img width={48} src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/acedcf9400bb7.png" alt="choice icon" /> : ""}</div>
               </div>
             </div>
 
