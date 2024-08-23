@@ -21,7 +21,7 @@ const Nav = ({authenticate}) => {
   const handleLoginLogoutClick = () => {
     if (isAuthenticated) {
       // 현재 로그인 상태일 때 '로그아웃'을 클릭하면, 로그아웃 알림 표시
-      alert("로그아웃 되었습니다.");
+      alert("로그아웃 되었습니다. Bye Bye 🙋‍♀️");
       // 상태를 '로그인'으로 변경
       setIsAuthenticated(false);
     } else {
