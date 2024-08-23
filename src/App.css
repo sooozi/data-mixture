@@ -289,6 +289,9 @@ input:focus {
     bottom: 70px;
     left: 2rem;
   }
+  .page-productDetail {
+    padding: 20px 0 100px;
+  }
   .tit-icon-wrap {
     flex-direction: column;
     align-items: baseline;
