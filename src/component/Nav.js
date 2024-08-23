@@ -17,7 +17,8 @@ const Nav = ({authenticate}) => {
   const search = (event) => {
     if(event.key === "Enter") {
       let keyword = event.target.value;
-      navigate(`shop/?q=${keyword}`)
+      navigate(`shop/?q=${keyword}`);
+      setIsActive(!isActive);
     }
   };
 
