@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import RpsBox from '../component/RpsBox';
 import { useNavigate } from 'react-router-dom';
+import RpsBox from '../component/RpsBox';
 
 const choice = {
   rock : {

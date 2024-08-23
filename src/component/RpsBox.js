@@ -17,7 +17,7 @@ const RpsBox = (props) => {
       <h1>{props.title}</h1>
       <div className="item-img-wrap">
         {props.item && props.item.img ? (
-          <img className="item-img" src={props.item.img} alt={props.item.name} />
+          <img className="item-img" src={props.item.img} alt="item.name" />
         ) : (
           <p>Click button!</p>
         )}

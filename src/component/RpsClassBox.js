@@ -18,7 +18,7 @@ export default class RpsClassBox extends Component {
                 <h1>{this.props.title}</h1>
                 <div className="item-img-wrap">
                     {this.props.item && this.props.item.img ? (
-                        <img className="item-img" src={this.props.item.img} alt={this.props.item.name} />
+                        <img className="item-img" src={this.props.item.img} alt="item.name" />
                     ) : (
                         <p>Click button!</p>
                     )}
