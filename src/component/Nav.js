@@ -8,6 +8,7 @@ const Nav = ({authenticate}) => {
   // 상태 변수 isAuthenticated를 사용하여 현재 로그인 상태를 관리
   // 초기값은 부모 컴포넌트로부터 받은 authenticate prop에 기반
   const [isAuthenticated, setIsAuthenticated] = useState(authenticate);
+  const [isActive, setIsActive] = useState(false);
   const menuList = ['NEW IN','PAPERWEIGHT','OBJECT','FRUITS','STATIONERY','CLASS KIT',];
   const navigate = useNavigate();
   const location = useLocation();
@@ -45,9 +46,18 @@ const Nav = ({authenticate}) => {
     }
   }
 
+  const toggleHam = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <div className='nav-wrap'>
         <div className='cont-wrap login-wrap'>
+          <button className={`ham-wrap ${isActive ? 'active' : ''}`} onClick={toggleHam}>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
           <div className='login-box' onClick={handleLoginLogoutClick}>
             <FontAwesomeIcon icon={faUser} />
             <span>{isAuthenticated ? 'Logout' : 'Login'}</span>
@@ -61,7 +71,7 @@ const Nav = ({authenticate}) => {
               alt="logo image" />
           </Link>
         </div>
-        <div className='cont-wrap utility-box'>
+        <div className={`cont-wrap utility-box ${isActive ? 'active' : ''}`}>
           <ul className='menu-box'>
             {menuList.map(menu => <li>{menu}</li>)}
           </ul>

@@ -155,6 +155,44 @@ input:focus {
 .input-search:focus {
   border: 0;
 }
+.ham-wrap {
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+}
+.ham-wrap > .bar{
+  display: block ;
+  width: 90% ;
+  height: 1.5px;
+  background-color: black ;
+  position: absolute ;
+  left: 50% ;
+  transform: translate(-50% , -50%) ;
+  transition:0.5s;
+}
+.ham-wrap > .bar:nth-child(1){
+  top: 25% ;
+}
+.ham-wrap > .bar:nth-child(2){
+  top: 50% ;
+}
+.ham-wrap > .bar:nth-child(3){
+  top: 75% ;
+}
+.ham-wrap.active > .bar:nth-child(1){
+  top: 50% ;
+  transform: translate(-50% , -50%) rotate(45deg) ;
+}
+.ham-wrap.active > .bar:nth-child(2){
+  opacity: 0 ;
+}
+.ham-wrap.active > .bar:nth-child(3){
+  top: 50% ;
+  transform: translate(-50% , -50%) rotate(-45deg) ;
+}
 
 /* [쇼핑몰] - ProductCard */
 .item-wrap {
@@ -202,8 +240,15 @@ input:focus {
     display: flex;
     justify-content: center;
   }
+  .ham-wrap {
+    opacity: 1;
+  }
+  .ham-wrap.active {
+    z-index: 10;
+  }
   .cont-wrap.login-wrap {
     padding: 10px 15px;
+    justify-content: space-between;
   }
   .cont-wrap.utility-box{
     position: fixed !important;
@@ -213,12 +258,21 @@ input:focus {
     width: 70%;
     height: 100%;
     max-width: 400px;
-    z-index: 1;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(6.8px);
     align-items: baseline;
     padding-top: 100px;
+    z-index: -1;
     opacity: 0;
+  }
+  .cont-wrap.utility-box *{
+    z-index: -1;
+    opacity: 0;
+  }
+  .cont-wrap.utility-box.active,
+  .cont-wrap.utility-box.active * {
+    z-index: 1;
+    opacity: 1;
   }
   .menu-box {
     flex-direction: column;
