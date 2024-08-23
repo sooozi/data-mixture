@@ -289,6 +289,14 @@ input:focus {
     bottom: 70px;
     left: 2rem;
   }
+  .tit-icon-wrap {
+    flex-direction: column;
+    align-items: baseline;
+    padding-top: 20px
+  }
+  .page-productDetail .item-price {
+    padding-top: 15px;
+  }
 }
 
 
