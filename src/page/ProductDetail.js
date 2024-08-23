@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
@@ -7,16 +7,25 @@ import { useParams } from 'react-router';
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  const getProductDetail = async() => {
-    let url =`https://my-json-server.typicode.com/sooozi/data-mixture/products/${id}`;
+
+  // const getProductDetail = async() => {
+  //   let url =`https://my-json-server.typicode.com/sooozi/data-mixture/products/${id}`;
+  //   let response = await fetch(url);
+  //   let data =  await response.json();
+  //   setProduct(data);
+  // };
+
+  // getProductDetail 함수를 useCallback으로 메모이제이션
+  const getProductDetail = useCallback(async () => {
+    let url = `https://my-json-server.typicode.com/sooozi/data-mixture/products/${id}`;
     let response = await fetch(url);
-    let data =  await response.json();
+    let data = await response.json();
     setProduct(data);
-  };
+  }, [id]);  // id가 변경될 때만 함수가 다시 생성됨
 
   useEffect(() => {
     getProductDetail();
-  }, [])
+  }, [getProductDetail])
 
   return (
     <Container>
