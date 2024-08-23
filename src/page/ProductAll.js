@@ -8,6 +8,7 @@ import ProductCard from '../component/ProductCard';
 const ProductAll = () => {
   let [productList, setProductList] = useState([]);
   const [query, setQuery] = useSearchParams();
+  console.log(setQuery);
   const getProducts = async() => {
     let searchQuery = query.get("q") || "";
     let url =`https://my-json-server.typicode.com/sooozi/data-mixture/products?q=${searchQuery}`;
