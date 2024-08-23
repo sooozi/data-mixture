@@ -18,7 +18,7 @@ const Nav = ({authenticate}) => {
     if(event.key === "Enter") {
       let keyword = event.target.value;
       navigate(`shop/?q=${keyword}`);
-      setIsActive(!isActive);
+      setIsActive(false);
     }
   };
 
