@@ -241,11 +241,12 @@ input:focus {
     justify-content: center;
   }
   .ham-wrap {
-    opacity: 1;
-    position: fixed;
+    position: absolute;
     left: 15px;
+    opacity: 1;
   }
   .ham-wrap.active {
+    position: fixed;
     z-index: 10;
   }
   .cont-wrap.login-wrap {
