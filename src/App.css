@@ -93,6 +93,7 @@
 }
 .cont-wrap.login-wrap {
   justify-content: flex-end;
+  gap: 20px;
 }
 .login-box {
   display: flex;
@@ -196,7 +197,43 @@ input:focus {
   margin: 6px 0;
 }
 
-
+@media (max-width: 991px) {
+  .page-productAll .col-lg-3 {
+    display: flex;
+    justify-content: center;
+  }
+  .cont-wrap.login-wrap {
+    padding: 10px 15px;
+  }
+  .cont-wrap.utility-box{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.3);
+    width: 70%;
+    height: 100%;
+    max-width: 400px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(6.8px);
+    align-items: baseline;
+    padding-top: 100px;
+    opacity: 0;
+  }
+  .menu-box {
+    flex-direction: column;
+    left: 5%;
+    transform: none;
+  }
+  .menu-box li {
+    font-size: 20px;
+  }
+  .search-box {
+    position: absolute;
+    bottom: 100px;
+    left: 2rem;
+  }
+}
 
 
 

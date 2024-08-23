@@ -2,7 +2,7 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Nav = ({authenticate}) => {
   // 상태 변수 isAuthenticated를 사용하여 현재 로그인 상태를 관리
@@ -10,6 +10,9 @@ const Nav = ({authenticate}) => {
   const [isAuthenticated, setIsAuthenticated] = useState(authenticate);
   const menuList = ['NEW IN','PAPERWEIGHT','OBJECT','FRUITS','STATIONERY','CLASS KIT',];
   const navigate = useNavigate();
+  const location = useLocation();
+  const currentPath = location.pathname;
+  
   const search = (event) => {
     if(event.key === "Enter") {
       let keyword = event.target.value;
@@ -35,19 +38,28 @@ const Nav = ({authenticate}) => {
     setIsAuthenticated(authenticate);
   }, [authenticate]);
 
+  const shopLink = (event) => {
+    if (currentPath === '/shop') {
+      event.preventDefault(); // Prevent navigation
+      alert("You are already on the shop page 🧙‍♀️");
+    }
+  }
+
   return (
     <div className='nav-wrap'>
         <div className='cont-wrap login-wrap'>
-            <div className='login-box' onClick={handleLoginLogoutClick}>
-              <FontAwesomeIcon icon={faUser} />
-              <span>{isAuthenticated ? '로그아웃' : '로그인'}</span>
-            </div>
+          <div className='login-box' onClick={handleLoginLogoutClick}>
+            <FontAwesomeIcon icon={faUser} />
+            <span>{isAuthenticated ? 'Logout' : 'Login'}</span>
+          </div>
         </div>
         <div className='cont-wrap logo-box'>
-          <img
-            width={150}
-            src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/b573f536e38c6.png"
-            alt="logo image" />
+          <Link to="/shop" onClick={shopLink}>
+            <img
+              width={150}
+              src="https://cdn.imweb.me/upload/S20200607eef2419d78f7d/b573f536e38c6.png"
+              alt="logo image" />
+          </Link>
         </div>
         <div className='cont-wrap utility-box'>
           <ul className='menu-box'>
