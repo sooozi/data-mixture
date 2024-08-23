@@ -245,6 +245,7 @@ input:focus {
   }
   .ham-wrap.active {
     z-index: 10;
+    position: fixed;
   }
   .cont-wrap.login-wrap {
     padding: 10px 15px;
