@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import NAV from './component/Nav';
 import BoxPage from './page/BoxPage';
+import Counting from './page/Counting';
 import HomePage from './page/HomePage';
 import Login from './page/Login';
 import ProductAll from './page/ProductAll';
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login setAuthenticate={setAuthenticate}/>}></Route>
         <Route path="/shop" element={<ProductAll/>}></Route>
         <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate}/>}></Route>
+        <Route path="/counting" element={<Counting/>}></Route>
       </Routes>
     </div>
   );
