@@ -24,6 +24,10 @@ function reducer(state=initialState, action) {
             return {...state, count:state.count + action.payload.num};
         case "DECREMENT" :
             return {...state, count:state.count - action.payload.num};
+        case "INCREMENT02" :
+            return {...state, count:state.count + action.payload.num};
+        case "DECREMENT02" :
+            return {...state, count:state.count - action.payload.num};
         case "LOGIN" :
             return {...state, id:action.payload.id, password:action.payload.password};
         default:

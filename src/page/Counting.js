@@ -16,6 +16,12 @@ const Counting = () => {
   const decrease = () => {
     dispatch({type:"DECREMENT", payload:{num:100}})
   }
+  const increase02 = () => {
+    dispatch({type:"INCREMENT02", payload:{num:1000}})
+  }
+  const decrease02 = () => {
+    dispatch({type:"DECREMENT02", payload:{num:1000}})
+  }
   const login = () => {
     dispatch({type:"LOGIN", payload:{id:"Hi, I'm participating in the CodingNoona React study group!", password:"Let's keep going and stay strong."}})
   }
@@ -37,10 +43,10 @@ const Counting = () => {
       </div>
       <div className="btn-wrap">
         <h2 className="txt-white">{count}</h2>
-        {/* <Button variant="warning" onClick={decrease}>1000 감소 ⬇️</Button> */}
+        <Button variant="warning" onClick={decrease02}>1000 감소 ⬇️</Button>
         <Button variant="warning" onClick={decrease}>100 감소 ⬇️</Button>
         <Button variant="warning" onClick={increase}>100 증가 ⬆️</Button>
-        {/* <Button variant="warning" onClick={increase}>1000 증가 ⬆️</Button> */}
+        <Button variant="warning" onClick={increase02}>1000 증가 ⬆️</Button>
       </div>
         {/* <ReduxBox /> */}
     </div>
