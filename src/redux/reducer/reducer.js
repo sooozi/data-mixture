@@ -4,6 +4,7 @@ let initialState={
     id: "",
     password: "",
     contactList: [], //배열 안에 연락처를 넣을 예정
+    keyword: "",
 }
 
 //행동지침이 들어가는 부분
@@ -31,6 +32,8 @@ function reducer(state=initialState, action) {
             return {...state, id:action.payload.id, password:action.payload.password};
         case "ADD_CONTACT" :
             return {...state,contactList:[...state.contactList,{name:action.payload.name,phoneNumber:action.payload.phoneNumber}]}; //배열 안에 있는 값은 유지하되 뒤에 새로운 객체 추가!
+        case "SEARCH_BY_USERNAME" :
+            return {...state, keyword: action.payload.keyword };
         default:
             return {...state};
 
