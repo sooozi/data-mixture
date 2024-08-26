@@ -37,7 +37,7 @@ const ContactForm = () => {
                         value={phoneNumber}
                     />
                 </Form.Group>
-                <Button variant="primary" type="submit">
+                <Button variant="warning" type="submit" className='txt-white'>
                     추가하기 
                 </Button>
             </Form>

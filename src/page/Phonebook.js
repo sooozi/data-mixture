@@ -12,13 +12,16 @@ import ContactList from "../component/ContactList";
 const Phonebook = () => {
   return (
     <div className="page-phonebook">
-        <h1>연락처</h1>
+        <h1>📒 Your Personal Phonebook 📒</h1>
+        <div className="txt-box">
+          <h5 className="txt-detail btn-shine">🐻‍❄️ Complete your cute profile list!</h5>
+        </div>
         <Container>
             <Row>
-                <Col>
+                <Col lg={4} className="cont-box">
                     <ContactForm/>
                 </Col>
-                <Col>
+                <Col lg={8} className="cont-box">
                   <ContactList/>
                 </Col>
             </Row>

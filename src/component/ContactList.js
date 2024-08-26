@@ -12,7 +12,7 @@ const ContactList = () => {
     useEffect(() => {
         console.log('contactList:', contactList);  // 추가된 코드
         console.log('keyword:', keyword);  
-        
+
         if (keyword !== "") {
           let list = contactList.filter((item) => item.name.includes(keyword));
           setFilteredList(list);
@@ -26,13 +26,15 @@ const ContactList = () => {
             <div className="search-wrap">
                 <SearchBox/>  
             </div>
-            <div className="item-wrap">
+            <div className="phone-item-wrap">
                 <div className="num-box">
-                    num:{filteredList.length}
+                    Num:{filteredList.length}
                 </div>
-                {filteredList.map((item, index) => (
-                    <ContactItem item={item} key={index} />
-                ))}
+                <div className="item-scroll">
+                    {filteredList.map((item, index) => (
+                        <ContactItem item={item} key={index} index={index}/>
+                    ))}
+                </div>
             </div>
         </div>
     )
