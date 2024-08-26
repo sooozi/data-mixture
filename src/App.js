@@ -7,6 +7,7 @@ import BoxPage from './page/BoxPage';
 import Counting from './page/Counting';
 import HomePage from './page/HomePage';
 import Login from './page/Login';
+import Phonebook from './page/Phonebook';
 import ProductAll from './page/ProductAll';
 import RpsPage from './page/RpsPage';
 import WeatherAppPage from './page/WeatherAppPage';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/shop" element={<ProductAll/>}></Route>
         <Route path="/product/:id" element={<PrivateRoute authenticate={authenticate}/>}></Route>
         <Route path="/counting" element={<Counting/>}></Route>
+        <Route path="/phonebook" element={<Phonebook/>}></Route>
       </Routes>
     </div>
   );

@@ -3,12 +3,11 @@ let initialState={
     count: 0,
     id: "",
     password: "",
+    contactList: [], //배열 안에 연락처를 넣을 예정
 }
 
 //행동지침이 들어가는 부분
 function reducer(state=initialState, action) {
-    console.log(action);
-
     // if(action.type === "INCREMENT") {
     //     //return 값으로 reducer가 store를 바꾸는 역할을 함!
     //     //...state한 이유 : (만약 state가 여러개이면)다른 state값은 유지하되!
@@ -30,6 +29,8 @@ function reducer(state=initialState, action) {
             return {...state, count:state.count - action.payload.num};
         case "LOGIN" :
             return {...state, id:action.payload.id, password:action.payload.password};
+        case "ADD_CONTACT" :
+            return {...state,contactList:[...state.contactList,{name:action.payload.name,phoneNumber:action.payload.phoneNumber}]}; //배열 안에 있는 값은 유지하되 뒤에 새로운 객체 추가!
         default:
             return {...state};
 
