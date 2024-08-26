@@ -31,7 +31,7 @@ const ContactForm = () => {
                 <Form.Group className="mb-3" controlId="formContact">
                     <Form.Label>전화번호</Form.Label>
                     <Form.Control
-                        type="text"
+                        type="number"
                         placeholder="💁‍♀️ 전화번호를 입력해주세요"
                         onChange={(event) => setPhoneNumber(event.target.value)}
                         value={phoneNumber}
