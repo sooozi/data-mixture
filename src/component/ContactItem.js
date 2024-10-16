@@ -13,6 +13,7 @@ const ContactItem = ({item, index }) => {
         'https://i.pinimg.com/236x/94/dd/25/94dd25f3692ecd605d0d3156e9cf7171.jpg',
         'https://i.pinimg.com/originals/48/06/65/4806655144635765866e5b1361d4a9c0.jpg',
     ]
+    
     // 현재 인덱스를 사용하여 이미지 URL 선택
     const imageUrl = imageUrls[index % imageUrls.length];
     
